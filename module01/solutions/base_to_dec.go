@@ -31,7 +31,7 @@ func IndexOf(word string, c rune) int {
 			return i
 		}
 	}
-	return 0
+	panic ("something went wrong")
 }
 
 // // simple example for BinaryToDec
