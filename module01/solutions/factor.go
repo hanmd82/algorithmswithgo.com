@@ -24,16 +24,12 @@ package module01solutions
 func Factor(primes []int, number int) []int {
 	ans := []int{}
 	for _, p := range primes {
-		for {
-			if number%p == 0 {
-				number /= p
-				ans = append(ans, p)
-			} else {
-				break
-			}
+		for number%p == 0 {
+			number /= p
+			ans = append(ans, p)
 		}
 	}
-	if number != 1 {
+	if number > 1 {
 		ans = append(ans, number)
 	}
 	return ans
